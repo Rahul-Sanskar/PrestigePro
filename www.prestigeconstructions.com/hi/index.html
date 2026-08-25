@@ -46,10 +46,13 @@ a{text-decoration:none!important;}
 /* re-enable: slider navigation arrows */
 .splide__arrow,
 
-/* re-enable: footer menu links */
-.footer-menu-detail a,
-.footer-menu-detail li a,
-.footer-dynamic a,
+/* re-enable: only privacy, terms, disclaimer footer links */
+.footer-dynamic a[href*="privacy-policy"],
+.footer-dynamic a[href*="terms-and-conditions"],
+.footer-dynamic a[href*="disclaimer"],
+.footer-menu-detail a[href*="privacy-policy"],
+.footer-menu-detail a[href*="terms-and-conditions"],
+.footer-menu-detail a[href*="disclaimer"],
 
 /* re-enable: enquiry form terms/privacy links */
 .golden-text,

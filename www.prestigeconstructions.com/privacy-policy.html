@@ -47,10 +47,13 @@ a{text-decoration:none!important;}
 /* re-enable: slider navigation arrows */
 .splide__arrow,
 
-/* re-enable: footer menu links */
-.footer-menu-detail a,
-.footer-menu-detail li a,
-.footer-dynamic a,
+/* re-enable: only privacy, terms, disclaimer footer links */
+.footer-dynamic a[href*="privacy-policy"],
+.footer-dynamic a[href*="terms-and-conditions"],
+.footer-dynamic a[href*="disclaimer"],
+.footer-menu-detail a[href*="privacy-policy"],
+.footer-menu-detail a[href*="terms-and-conditions"],
+.footer-menu-detail a[href*="disclaimer"],
 
 /* re-enable: enquiry form terms/privacy links */
 .golden-text,
@@ -264,10 +267,13 @@ a{text-decoration:none!important;}
 /* re-enable: slider navigation arrows */
 .splide__arrow,
 
-/* re-enable: footer menu links */
-.footer-menu-detail a,
-.footer-menu-detail li a,
-.footer-dynamic a,
+/* re-enable: only privacy, terms, disclaimer footer links */
+.footer-dynamic a[href*="privacy-policy"],
+.footer-dynamic a[href*="terms-and-conditions"],
+.footer-dynamic a[href*="disclaimer"],
+.footer-menu-detail a[href*="privacy-policy"],
+.footer-menu-detail a[href*="terms-and-conditions"],
+.footer-menu-detail a[href*="disclaimer"],
 
 /* re-enable: enquiry form terms/privacy links */
 .golden-text,
@@ -880,7 +886,6 @@ a{text-decoration:none!important;}
         </li>
     </ul>
 </div> -->
-<a href="javascript:void(0);" class="theme-btn enquire-now-sticky-btn enquirylabel passenquiry" open-sidebar="enquire-sidebar">Enquire Now</a>
 <script nonce="randomValue">
     // properties-search-tab
     function openTab(evt, tabName) {
@@ -1218,194 +1223,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<div id="enquire-sidebar" class="theme-sidebar theme-sidebar-sm">
-    <div class="theme-sidebar-card">
-        <div class="theme-sidebar-header">
-            <div class="theme-sidebar-action">
-                <span class="close-sidebar enquirylabel" close-sidebar="enquire-sidebar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </span>
-            </div>
-        </div>
-        <div class="theme-sidebar-detail project-enquiry-sidebar">
-            <div class="mb-4 ml-5">
-                <span class="is-uppercase has-text-weight-semibold">Enquire Now</span>
-            </div>
-            <div class="project-vertical-block theme-scrollbar">
-
-              
-                <form class="form" action="#" id="enquiry_common_frm_submit">
-                    <div class="columns is-multiline is-vcentered">
-                        <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label nodtranslate">Your Name*</label>
-                                    <input type="text" class="form-control customer_fullname nodtranslate" name="enquiry_name" id="enquiry_name" placeholder="Enter Your Name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                            <div class="col-form">
-                                <div class="form-group with-country-code dark-select">
-                                    <label class="form-label nodtranslate">Mobile*</label>
-                                    <div class="sm-select is-flex">
-                                        <select name="enquiry_country" id="enquiry_country" class="form-control select-cc countrycodeno customer_Mobile_CountryCode customer_Country_Code">
-                                            <option selected value="+91">+91</option>
-                                        </select>
-                                        <input type="text" class="form-control numbervalidate nodtranslate customer_Mobile" name="enquiry_number" id="enquiry_number" placeholder="Your Mobile">
-                                    </div>
-                                </div>
-                                <div class="col-form mt-3 is_whatsapp ">
-                                        <div class="form-group">
-                                          <div class="checkbox-item-update">
-                                            <div class="checkbox-container">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" name="whatsapp_nri" id="whatsapp_nri">
-                                                </label>
-                                                <span class="checkbox-text">Do you have whatsapp activated on this number ?</span>
-                                            </div>
-                                          </div>
-                                      </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label nodtranslate">Your Email*</label>
-                                    <input type="email" class="form-control nodtranslate customer_Email" name="enquiry_email" id="enquiry_email" placeholder="Enter Your Email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                                    <div class="col-form">
-                                        <div class="form-group">
-                                            <label class="form-label">Projects Type*</label>
-                                            <select name="enquire_project_type" id="enquire_project_type" class="select-dropdown select">
-                                            <option class="text-capitalize" data-description=""value="">Select Project Type</option>
-                                            <option class="text-capitalize" data-description="residential-projects"value="residentialprojects">Residential Projects</option>
-                                            <option class="text-capitalize" data-description="commercial-projects"value="commercial">Commercial Projects</option>
-                                            <option class="text-capitalize" data-description="rental-projects"value="rentalprojects">Rental Projects</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                                  <div class="border border-light-gray">
-                                      <h6 class="gray-bg px-3 py-2">Verify with</h6>
-                                      <div class="p-3 radio-container">
-                                          <div class="custom-radiobox">
-                                              <input type="radio" name="contact_type" id="mobile_enquiry_common" checked="">
-                                              <label for="mobile_enquiry_common" class="radio-text">Mobile/OTP</label>
-                                          </div>
-                                          <div class="custom-radiobox">
-                                              <input type="radio" name="contact_type" id="whatsapp_enquiry_common">
-                                              <label for="whatsapp_enquiry_common" class="radio-text">WhatsApp URL</label>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                                 <div class="hide_infromation column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                                    <div class="col-form">
-                                        <div class="form-group">
-                                          <div class="checkbox-item-update">
-                                            <div class="checkbox-container">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" name="agree_to_be_contacted" >
-                                                </label>
-                                                <span class="checkbox-text">I confirm that I am 18 years of age or older and agree to the The <a href="terms-and-conditions.html" target="_blank" class="golden-text">Terms and Conditions</a> and <a href="privacy-policy.html" target="_blank" class="golden-text">Privacy Policy</a> including the collection and processing of my personal data.</span>
-                                            </div>
-                                                                                        <!-- <span class="checkbox-desc">By submitting this form you agree to the <a href="https://www.prestigeconstructions.com/terms-and-conditions" target="_blank" class="golden-text">Terms and Conditions</a> and <a href="https://www.prestigeconstructions.com/privacy-policy" target="_blank" class="golden-text">Privacy Policy</a></span> -->
-                                            <!-- <span class="checkbox-desc">The <a href="https://www.prestigeconstructions.com/terms-and-conditions" target="_blank" class="golden-text">Terms and Conditions</a> and <a href="https://www.prestigeconstructions.com/privacy-policy" target="_blank" class="golden-text">Privacy Policy</a> including the collection and processing of my personal data.</span> -->
-                                          </div>
-                                      </div>
-                                    </div>
-                                    <div class="checkbox-container mt-2">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" name="validatemarketingconsent">
-                                                </label>
-                                                <span class="checkbox-text">Inform me about upcoming projects and offers.</span>
-                                            </div>
-                                </div> 
-                        <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                            <div class="col-form mb-0">
-                                <button type="submit" class="theme-btn line-btn full-width common_submit_btn enquiry_submit_btn" id="enquiry_submit_btn">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-                <form class="form sm-form" id="enquiryotp_verify_frm">
-                <div class="theme-loader form-loader theme-page-loader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="100" height="100" style="shape-rendering: auto; display: block; background: transparent;" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g>
-                          <circle cx="38" cy="50" fill="#3f3f3f" r="12">
-                              <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="38;62;38" begin="-0.5s"></animate>
-                          </circle>
-                          <circle cx="62" cy="50" fill="#ad9050" r="12">
-                              <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="38;62;38" begin="0s"></animate>
-                          </circle>
-                          <circle cx="38" cy="50" fill="#3f3f3f" r="12">
-                              <animate attributeName="cx" repeatCount="indefinite" dur="1s" keyTimes="0;0.5;1" values="38;62;38" begin="-0.5s"></animate>
-                              <animate attributeName="fill-opacity" values="0;0;1;1" calcMode="discrete" keyTimes="0;0.499;0.5;1" dur="1s" repeatCount="indefinite"></animate>
-                          </circle>
-                          <g></g>
-                      </g>
-                  </svg>
-                </div>
-                    <div class="show_infromation is-hidden columns is-multiline is-gapless is-vcentered">
-
-                        <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen">
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label">Name</label>
-                                    <span class="common_enquiry_bind_hidden_name"></span>
-                                </div>
-                            </div>
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label">Number</label>
-                                    <span class="common_enquiry_bind_hidden_number"></span>
-                                </div>
-                            </div>
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label">Email</label>
-                                    <span class="common_enquiry_bind_hidden_email"></span>
-                                </div>
-                            </div>
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label">Poject Type</label>
-                                    <span class="common_enquire_bind_hidden_project_type"></span>
-                                </div>
-                            </div>
-                            <div class="col-form">
-                                <div class="form-group">
-                                    <label class="form-label">OTP*</label>
-                                    <input type="text" name="enquiryotp_dd" id="enquiryotp_dd" class="form-control numbervalidate" placeholder="OTP" maxlength="6">
-                                </div>
-                            </div>
-                            <div id="timer_display" class="resend-btn-timer timer_display">Resend OTP in 0s</div>
-                            <div id="resend_otp_container" class="has-text-right resend_otp_container">
-                                <button id="resend_otp_btn" type="button" class="border-0 fs-6 fw-bold p-0 text-primary white-bg resend_otp_btn">Resend OTP</button>
-                            </div>
-                            
-                                <div class="col-form mb-0 mt-4">
-                                    <button type="submit" class="theme-btn line-btn full-width enquiryotp_submit_btn">Submit</button>
-                                </div>
-                            
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<input type="hidden" id="enquiryotp_verify">
     
     
 
