@@ -1,15 +1,20 @@
 Options -Indexes
 RewriteEngine On
 
-# Don't rewrite requests that are already targeting the subfolder
+# ── Clean URL rules for policy pages (no .html extension) ──────────
+RewriteRule ^disclaimer$           /www.prestigeconstructions.com/disclaimer.html [L]
+RewriteRule ^privacy-policy$       /www.prestigeconstructions.com/privacy-policy.html [L]
+RewriteRule ^terms-and-conditions$ /www.prestigeconstructions.com/terms-and-conditions.html [L]
+
+# ── Don't rewrite requests already targeting the subfolder ─────────
 RewriteCond %{REQUEST_URI} !^/www\.prestigeconstructions\.com/
 
-# Don't rewrite actual files/directories at root level (backblue.gif, fade.gif, etc.)
+# ── Don't rewrite real files/directories at root level ────────────
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Rewrite everything else to the site subfolder transparently
+# ── Rewrite everything else to the site subfolder transparently ───
 RewriteRule ^(.+)$ /www.prestigeconstructions.com/$1 [L,QSA]
 
-# Rewrite bare root to site index
+# ── Bare root → site index ─────────────────────────────────────────
 RewriteRule ^$ /www.prestigeconstructions.com/index.html [L]
