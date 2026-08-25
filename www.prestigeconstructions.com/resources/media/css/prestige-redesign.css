@@ -1366,6 +1366,424 @@ header.sticky .theme-logo {
     height: 40px !important;
     padding: 9px !important;
   }
+  
+  /* ══════════════════════════════════════════════════════════════════
+     ADDITIONAL PREMIUM ENHANCEMENTS — v2.1
+     ══════════════════════════════════════════════════════════════════ */
+  
+  /* ─── ENHANCED FORM INPUTS ─────────────────────────────────────────── */
+  .form-group {
+    position: relative;
+    margin-bottom: 0 !important;
+  }
+  
+  .form-group .form-control,
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group input[type="number"],
+  .form-group textarea {
+    width: 100%;
+    font-family: var(--f-sans) !important;
+    font-size: 14px !important;
+    color: var(--c-ink) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--c-border) !important;
+    background: transparent !important;
+    padding: 12px 0 !important;
+    transition: border-color var(--dur) var(--ease) !important;
+    border-radius: 0 !important;
+  }
+  
+  .form-group .form-control:focus,
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none !important;
+    border-bottom-color: var(--c-gold) !important;
+    box-shadow: none !important;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #bbb !important;
+    font-size: 13px !important;
+  }
+  
+  /* Select dropdowns */
+  .custom-select select,
+  select.select {
+    font-family: var(--f-sans) !important;
+    font-size: 14px !important;
+    color: var(--c-ink) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--c-border) !important;
+    background: transparent !important;
+    padding: 12px 32px 12px 0 !important;
+    border-radius: 0 !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23777777' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0 center !important;
+    cursor: pointer;
+  }
+  
+  .custom-select select:focus {
+    border-bottom-color: var(--c-gold) !important;
+  }
+  
+  /* ─── CUSTOM CHECKBOXES & RADIOS ──────────────────────────────────── */
+  .checkbox-container input[type="checkbox"],
+  .radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-container label,
+  .radio-container label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    cursor: pointer;
+    font-family: var(--f-sans) !important;
+    font-size: 13px !important;
+    color: var(--c-body) !important;
+    user-select: none;
+  }
+  
+  .checkbox-container label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--c-border) !important;
+    background: var(--c-white);
+    flex-shrink: 0;
+    transition: all var(--dur) var(--ease) !important;
+  }
+  
+  .checkbox-container input:checked + label::before {
+    background: var(--c-gold) !important;
+    border-color: var(--c-gold) !important;
+  }
+  
+  .checkbox-container input:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .radio-container label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--c-border) !important;
+    border-radius: 50% !important;
+    background: var(--c-white);
+    flex-shrink: 0;
+    transition: all var(--dur) var(--ease) !important;
+  }
+  
+  .radio-container input:checked + label::before {
+    background: var(--c-white) !important;
+    border-color: var(--c-gold) !important;
+  }
+  
+  .radio-container input:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--c-gold) !important;
+  }
+  
+  /* ─── CUSTOM SWITCH TOGGLE ────────────────────────────────────────── */
+  .switch-label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    cursor: pointer;
+  }
+  
+  .switch-label::before {
+    display: none !important;
+  }
+  
+  .switch-label .switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+  }
+  
+  .switch-label .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch-label .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 24px;
+  }
+  
+  .switch-label .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  }
+  
+  .switch-label input:checked + .slider {
+    background-color: var(--c-gold);
+  }
+  
+  .switch-label input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* ─── ENHANCED SLIDER / CAROUSEL ─────────────────────────────────── */
+  .splide {
+    padding: 0 !important;
+  }
+  
+  .splide__pagination {
+    bottom: -40px !important;
+    gap: 8px !important;
+  }
+  
+  .splide__pagination button {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: var(--c-border) !important;
+    opacity: 1 !important;
+    transition: all var(--dur) var(--ease) !important;
+  }
+  
+  .splide__pagination button.is-active {
+    background: var(--c-gold) !important;
+    transform: scale(1.3) !important;
+  }
+  
+  /* Progress bar for auto-sliders */
+  .splide__progress-bar {
+    height: 2px !important;
+    background: var(--c-border) !important;
+  }
+  
+  .splide__progress-bar .splide__progress__bar {
+    height: 100% !important;
+    background: var(--c-gold) !important;
+    transition: width 0.1s linear !important;
+  }
+  
+  /* ─── PAGE LOADING SKELETON ───────────────────────────────────────── */
+  @keyframes skeleton-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      var(--c-off-white) 25%,
+      var(--c-cream) 50%,
+      var(--c-off-white) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+    border-radius: 2px;
+  }
+  
+  .skeleton-text {
+    height: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .skeleton-title {
+    height: 24px;
+    width: 60%;
+    margin-bottom: 16px;
+  }
+  
+  .skeleton-image {
+    height: 200px;
+    width: 100%;
+  }
+  
+  /* ─── ENHANCED CARD HOVER EFFECTS ─────────────────────────────────── */
+  .project-card,
+  .theme-card,
+  .award-card,
+  .blog-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--dur) var(--ease),
+                box-shadow var(--dur) var(--ease) !important;
+  }
+  
+  .project-card::after,
+  .theme-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--c-gold), var(--c-gold-lt));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur) var(--ease) !important;
+  }
+  
+  .project-card:hover::after,
+  .theme-card:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Image zoom on hover */
+  .project-card img,
+  .theme-card img,
+  .blog-card img {
+    transition: transform 0.6s var(--ease) !important;
+  }
+  
+  .project-card:hover img,
+  .theme-card:hover img,
+  .blog-card:hover img {
+    transform: scale(1.05) !important;
+  }
+  
+  /* ─── CUSTOM SCROLLBAR FOR SPECIFIC AREAS ────────────────────────── */
+  .theme-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .theme-scrollbar::-webkit-scrollbar-track {
+    background: var(--c-off-white);
+  }
+  
+  .theme-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--c-gold);
+    border-radius: 2px;
+  }
+  
+  /* ─── ENHANCED LINK UNDERLINES ────────────────────────────────────── */
+  .content-link {
+    position: relative;
+    display: inline-block;
+    color: var(--c-gold) !important;
+    text-decoration: none !important;
+  }
+  
+  .content-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--c-gold);
+    transition: width var(--dur) var(--ease) !important;
+  }
+  
+  .content-link:hover::after {
+    width: 100%;
+  }
+  
+  /* ─── PARALLAX SECTIONS ───────────────────────────────────────────── */
+  .parallax-section {
+    position: relative;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  @media (max-width: 768px) {
+    .parallax-section {
+      background-attachment: scroll !important;
+    }
+  }
+  
+  /* ─── ENHANCED MODAL ANIMATIONS ──────────────────────────────────── */
+  .theme-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--dur) var(--ease),
+                visibility var(--dur) var(--ease) !important;
+  }
+  
+  .theme-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .theme-modal-card {
+    transform: translateY(20px) scale(0.98);
+    transition: transform var(--dur-lg) var(--ease) !important;
+  }
+  
+  .theme-modal.is-open .theme-modal-card {
+    transform: translateY(0) scale(1);
+  }
+  
+  /* ─── CURSOR EFFECTS ──────────────────────────────────────────────── */
+  a[href],
+  button,
+  .clickable,
+  .theme-btn,
+  .project-vertical-block,
+  .theme-block {
+    cursor: pointer;
+  }
+  
+  /* ─── PRINT STYLES ────────────────────────────────────────────────── */
+  @media print {
+    header,
+    footer,
+    .theme-sidebar,
+    .splide,
+    .theme-btn {
+      display: none !important;
+    }
+    
+    .section {
+      padding: 20px 0 !important;
+    }
+    
+    body {
+      font-size: 12px !important;
+      color: #000 !important;
+      background: #fff !important;
+    }
+  }
   .full-screen-cookie-block { padding: 20px 24px !important; }
   .theme-modal-card { padding: 24px !important; }
 }
