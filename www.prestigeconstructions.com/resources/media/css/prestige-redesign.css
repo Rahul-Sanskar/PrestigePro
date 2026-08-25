@@ -2011,3 +2011,222 @@ select.select {
   .section { padding: 20px 0 !important; }
   body { font-size: 12px !important; color: #000 !important; background: #fff !important; }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════
+   VISIBILITY FIXES — Contrast correction patches
+   All issues: dark text on dark bg, or white text on white bg
+   ══════════════════════════════════════════════════════════════════ */
+
+/* FIX 1 — Select2 dropdown text in search section (dark text on dark bg) */
+.real-estate-properties-col .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-selection__rendered {
+  color: var(--c-pearl) !important;
+}
+
+/* FIX 2 — Sub-section title white background box floating on dark bg */
+.sub-section-title h2, .sub-section-title h3, .sub-section-title span {
+  background-color: transparent !important;
+  color: var(--c-white) !important;
+}
+.section-inner-page-with-bg .sub-section-title h2,
+.section-inner-page-with-bg .sub-section-title h3,
+.section-inner-page-with-bg .sub-section-title span {
+  background-color: transparent !important;
+}
+
+/* FIX 3 — Copyright footer text — too faint at 25% opacity */
+.copyright-detail,
+.copyright-detail *,
+.footer-dynamic small,
+.section-footer small {
+  color: rgba(255,255,255,.55) !important;
+}
+.copyright-detail p {
+  color: rgba(255,255,255,.55) !important;
+}
+
+/* FIX 4 — Accordion bullet dots on dark background */
+.accordian_desc li::before,
+.blog-detail-desc ul li::before {
+  background-color: var(--c-silver) !important;
+}
+
+/* FIX 5 — Search placeholder: original forces #000000 !important — override with higher specificity */
+.search-by-project-name .form-control::placeholder,
+.search-by-project-name input::placeholder {
+  color: var(--c-silver) !important;
+  font-size: 13px !important;
+}
+
+/* FIX 6 — Project config h4 in detail view (high-specificity dark gray on dark card) */
+.projects-properties-detail .project-configurations-desc h4,
+.projects-properties-detail .project-configurations-desc h4 span,
+.projects-properties-detail .project-configurations-desc h4 span.nodtranslate {
+  color: var(--c-silver) !important;
+}
+.project-configurations-desc h4,
+.project-configurations-desc h4 span {
+  color: rgba(255,255,255,.7) !important;
+}
+
+/* FIX 7 — span.nodtranslate inside section titles (original: #303030 on dark bg) */
+.section-title h1 > span.nodtranslate,
+.section-title h2 > span.nodtranslate,
+.section-title .section-title-text > span.nodtranslate {
+  color: var(--c-white) !important;
+}
+/* nodtranslate spans that carry gold styling */
+.text-primary > span.nodtranslate {
+  color: var(--c-gold) !important;
+}
+
+/* FIX 8 — Header search overlay tab links: original #000000 on dark bg */
+#header-search-menu-detail .tabs-detail li a,
+.header-search-menu-detail .tabs-detail li a {
+  color: var(--c-pearl) !important;
+}
+#header-search-menu-detail .tabs-detail li a:hover {
+  color: var(--c-gold) !important;
+}
+#header-search-menu-detail .tabs-detail li.is-active a {
+  color: var(--c-gold) !important;
+  border-bottom-color: var(--c-gold) !important;
+}
+
+/* FIX 9 — Board of directors card body paragraph text (borderline ~3.8:1) */
+.section-board-of-director .theme-block p,
+.section-board-of-director .theme-block span,
+.section-board-of-director .theme-block small {
+  color: var(--c-pearl) !important;
+}
+
+/* BONUS FIX — Search overlay background: original was light-frosted, redesign makes it dark.
+   Ensure all inputs/labels inside it have legible light text */
+#header-search-menu-detail {
+  background: rgba(12,12,18,.97) !important;
+}
+#header-search-menu-detail .form-control,
+#header-search-menu-detail input {
+  color: var(--c-pearl) !important;
+  background: rgba(255,255,255,.05) !important;
+  border-bottom-color: rgba(255,255,255,.15) !important;
+}
+#header-search-menu-detail .form-control::placeholder {
+  color: var(--c-ash) !important;
+}
+#header-search-menu-detail .form-label,
+#header-search-menu-detail label {
+  color: var(--c-silver) !important;
+}
+
+/* BONUS FIX — Section banner text that has white background box on hero */
+.section-banner-text-desc .section-title h1,
+.section-banner-text-desc .section-title h2,
+.section-banner-text-desc .section-title h3 {
+  background-color: transparent !important;
+  color: var(--c-white) !important;
+  text-shadow: 0 2px 20px rgba(0,0,0,.6);
+}
+
+/* BONUS FIX — `.real-estate-properties-col` select2 arrow color */
+.light-style .select2-container--default .select2-selection--single .select2-selection__arrow b,
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  background-color: var(--c-silver) !important;
+  clip-path: polygon(0 0, 50% 100%, 100% 0) !important;
+  width: 12px !important;
+  height: 7px !important;
+}
+
+/* BONUS FIX — Select2 dropdown list items on dark popup */
+.light-style .select2-dropdown,
+.select2-dropdown {
+  background: var(--c-night) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+}
+.select2-results__option,
+.select2-container--default .select2-results__option {
+  color: var(--c-pearl) !important;
+}
+.select2-container--default .select2-results__option--highlighted:not([aria-selected="true"]) {
+  background: rgba(201,168,76,.12) !important;
+  color: var(--c-gold) !important;
+}
+.select2-results__option[role="option"][aria-selected="true"] {
+  background: var(--c-gold) !important;
+  color: var(--c-void) !important;
+}
+
+/* BONUS FIX — Range slider value labels */
+.custom-range-slider .index_from,
+.custom-range-slider .index_to,
+.custom-range-slider ul li label {
+  color: var(--c-pearl) !important;
+}
+
+/* BONUS FIX — Form check labels (dark gray original on dark bg) */
+.form-check-label,
+.checkbox-text,
+.radio-text {
+  color: var(--c-pearl) !important;
+}
+
+/* BONUS FIX — .know-more-btn span was set to uppercase + dark in some contexts */
+.know-more-btn span {
+  color: var(--c-pearl) !important;
+}
+.know-more-btn:hover span { color: var(--c-gold) !important; }
+
+/* BONUS FIX — Input range slider labels */
+.custom-range-slider input.custom-range-title {
+  color: var(--c-pearl) !important;
+  background-color: transparent !important;
+}
+.custom-range-slider ul li::before {
+  background-color: rgba(255,255,255,.2) !important;
+}
+
+/* BONUS FIX — .theme-block-floting-tag (white bg, dark text) — fine on dark cards */
+.theme-block-floting-tag {
+  background: rgba(255,255,255,.9) !important;
+  color: var(--c-ink) !important;
+}
+
+/* BONUS FIX — Error message labels */
+.error-msg,
+label.error .error-msg {
+  background-color: #c0392b !important;
+  color: #fff !important;
+}
+
+/* BONUS FIX — rera-no on dark project card */
+.rera-no, .rera-no span, .rera-no p {
+  color: var(--c-silver) !important;
+  border-top-color: rgba(255,255,255,.08) !important;
+}
+
+/* BONUS FIX — project-configurations border on dark cards */
+.project-configurations {
+  border-top-color: rgba(255,255,255,.08) !important;
+  border-bottom-color: rgba(255,255,255,.08) !important;
+}
+
+/* BONUS FIX — CMS inner page text: original sets #303030 on some cms-item elements */
+.cms-item h4, .cms-item b {
+  color: var(--c-gold) !important;
+}
+.cms-item b {
+  color: var(--c-pearl) !important;
+}
+.cms-item ol li,
+.accordian_desc li,
+.blog-detail-desc ul li {
+  color: var(--c-pearl) !important;
+}
+
+/* BONUS FIX — `.section-title h2` inside `.related-articles` (original: #303030) */
+.related-articles .section-title h2,
+.related-articles .section-title span {
+  color: var(--c-white) !important;
+}
