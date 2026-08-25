@@ -1216,7 +1216,7 @@ fetch("https://www.prestigeconstructions.com/api/maps").then(e=>e.json()).then(e
                                                     <span>Only CRISIL DA1+ rated</span> <h1>Real Estate Developer in India</h1>
                                                     </div>
                                                 </div>
-                                                <p>One of India's most trusted and respected names in Real Estate - The Prestige Group is synonymous with innovation and luxurious living. Since 1986, Prestige has helped build his face of Modern Urban India in its glorious globalized avatar by consistently introducing and creating state-of-the-art transformative real estate concepts, technologies and innovations.</p>
+                                                <p>One of India's most trusted and respected names in Real Estate - PRESTIGE MULUND REALTY PRIVATE LIMITED (The Prestige Group} is synonymous with innovation and luxurious living. Since 1986, Prestige has helped build his face of Modern Urban India in its glorious globalized avatar by consistently introducing and creating state-of-the-art transformative real estate concepts, technologies and innovations.</p>
                                                 <a class="know-more-btn with-horizontal-arrow" href="./about-us">
                                                 <span>See Details</span>
                                                 <div class="know-more-btn-icon">
