@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine On
+
+# Rewrite root to the site subfolder transparently (URL stays as prestigemulund.online)
+RewriteCond %{REQUEST_URI} !^/www\.prestigeconstructions\.com/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /www.prestigeconstructions.com/$1 [L,QSA]
+
+# Handle root exactly
+RewriteRule ^$ /www.prestigeconstructions.com/index.html [L]
