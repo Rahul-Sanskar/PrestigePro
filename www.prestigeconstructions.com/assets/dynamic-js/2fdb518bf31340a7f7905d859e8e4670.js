@@ -518,6 +518,10 @@ function openTab(e,t,l){let c,o,r;document.querySelectorAll("."+l).forEach((func
                     description = description.replace(/cdnpath/g, "https://www.prestigeconstructions.com");
                 }
                 $(".footer-dynamic").html(description);
+                // Rewrite absolute prestigeconstructions.com links to relative paths
+                document.querySelectorAll('.footer-dynamic a[href]').forEach(function(a) {
+                    a.href = a.href.replace(/^https?:\/\/www\.prestigeconstructions\.com\//i, '').replace(/^https?:\/\/prestigeconstructions\.com\//i, '');
+                });
                 // Bind current year for statically loaded footer (like cp-footer)
                 document.querySelectorAll('.bind_current_year').forEach(el => el.textContent = new Date().getFullYear());
             },
