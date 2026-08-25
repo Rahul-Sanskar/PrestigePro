@@ -93,15 +93,16 @@ body {
   overflow-x: hidden;
 }
 
-/* Ambient grain overlay */
+/* Ambient grain overlay - refined for better readability */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
-  opacity: .5;
+  opacity: .2;
+  mix-blend-mode: overlay;
 }
 
 /* Cinematic scrollbar */
@@ -170,7 +171,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 24px !important;
 }
 
-/* Body text */
+/* Body text - refined for better readability */
 p {
   font-family: var(--f-body) !important;
   color: var(--c-silver) !important;
@@ -1129,11 +1130,11 @@ header.scrolled .theme-menu li a { height: 56px !important; }
   padding: 24px !important;
 }
 
-/* Image hover zoom */
+/* Image hover zoom - enhanced */
 .project-vertical-block img {
   transition: transform var(--dur-slow) var(--ease-smooth) !important;
 }
-.project-vertical-block:hover img { transform: scale(1.1) !important; }
+.project-vertical-block:hover img { transform: scale(1.08) !important; }
 
 /* Project status */
 .project-status {
@@ -1209,7 +1210,7 @@ header.scrolled .theme-menu li a { height: 56px !important; }
   letter-spacing: -.04em !important;
 }
 
-/* Brand logos */
+/* Brand logos - enhanced hover effects */
 .our-brand-logo-slider picture img {
   background: rgba(255,255,255,.03) !important;
   border: 1px solid rgba(255,255,255,.06) !important;
@@ -1222,11 +1223,11 @@ header.scrolled .theme-menu li a { height: 56px !important; }
 }
 
 .our-brand-logo-slider picture img:hover {
-  background: rgba(201,168,76,.05) !important;
+  background: rgba(201,168,76,.08) !important;
   border-color: var(--c-gold-border) !important;
   filter: grayscale(0%) brightness(1) !important;
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: var(--sh-4), 0 0 30px var(--c-gold-glow) !important;
+  transform: translateY(-12px) scale(1.08);
+  box-shadow: var(--sh-5), 0 0 40px var(--c-gold-glow) !important;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -1769,22 +1770,22 @@ header.scrolled .theme-menu li a { height: 56px !important; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Section separator */
+/* Section separator - refined spacing */
 .section-title {
-  margin-bottom: 72px !important;
+  margin-bottom: 64px !important;
 }
 
 .section-title::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 56px;
   height: 1px;
   background: var(--c-gold);
-  margin-top: 28px;
-  box-shadow: 0 0 15px var(--c-gold-glow);
+  margin-top: 24px;
+  box-shadow: 0 0 12px var(--c-gold-glow);
 }
 
-.section-title.has-text-centered::after { margin: 28px auto 0; }
+.section-title.has-text-centered::after { margin: 24px auto 0; }
 .section-title:last-child { margin-bottom: 0 !important; }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -1975,17 +1976,30 @@ select.select {
   .full-screen-cookie-block { padding: 24px !important; }
   .theme-modal-card { padding: 32px !important; }
   .split-section .split-content { padding: 48px 24px; }
+  .asymmetric-grid { gap: 48px; }
+  .stagger-grid { gap: 24px; }
+  .section-title { margin-bottom: 48px !important; }
+  .section-title::after { margin-top: 20px; }
 }
 
 @media screen and (max-width: 479px) {
   .section-title h1, .section-title h2,
   .section-title .section-title-text {
-    font-size: clamp(32px, 8vw, 48px) !important;
+    font-size: clamp(28px, 8vw, 40px) !important;
   }
   .theme-btn {
-    padding: 14px 24px !important;
+    padding: 12px 20px !important;
     font-size: 10px !important;
     letter-spacing: 2px !important;
+  }
+  .theme-menu li a { padding: 0 12px !important; }
+  .glass-card, .float-card, .theme-block {
+    border-radius: 4px !important;
+  }
+  .splide__arrow {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px !important;
   }
 }
 
