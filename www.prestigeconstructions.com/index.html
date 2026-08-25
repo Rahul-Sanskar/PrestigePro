@@ -47,6 +47,12 @@ a{text-decoration:none!important;}
 /* re-enable: slider navigation arrows */
 .splide__arrow,
 
+/* re-enable: nav anchor links to homepage sections */
+a[href="index.html#about"],
+a[href="index.html#projects"],
+a[href="index.html#featured-projects"],
+a[href="index.html#brands"],
+
 /* re-enable: only privacy, terms, disclaimer footer links */
 .footer-dynamic a[href*="privacy-policy"],
 .footer-dynamic a[href*="terms-and-conditions"],
@@ -275,6 +281,12 @@ a{text-decoration:none!important;}
 /* re-enable: slider navigation arrows */
 .splide__arrow,
 
+/* re-enable: nav anchor links to homepage sections */
+a[href="index.html#about"],
+a[href="index.html#projects"],
+a[href="index.html#featured-projects"],
+a[href="index.html#brands"],
+
 /* re-enable: only privacy, terms, disclaimer footer links */
 .footer-dynamic a[href*="privacy-policy"],
 .footer-dynamic a[href*="terms-and-conditions"],
@@ -308,22 +320,22 @@ a{text-decoration:none!important;}
                     <div class="column col-header col-middle">
                         <ul class="theme-menu">
                                                         <li>
-                                <a href="about-us.html">About</a>
+                                <a href="index.html#about">About</a>
                             </li>
                             <li>
-                                <a href="residential-projects.html">Residential</a>
+                                <a href="index.html#projects">Residential</a>
                             </li>
                             <li>
                                 <a href="offices.html">Offices</a>
                             </li>
                             <li>
-                                <a href="rental-projects.html">Rentals</a>
+                                <a href="index.html#featured-projects">Rentals</a>
                             </li>
                             <li>
                                 <a href="hospitality.html">Hospitality</a>
                             </li>
                             <li>
-                                <a href="retail-projects.html">Retail</a>
+                                <a href="index.html#brands">Retail</a>
                             </li>
                             
                             <li>
@@ -482,19 +494,19 @@ a{text-decoration:none!important;}
             </button>
             <ul id="header-menu" class="theme-scrollbar">
                 <li class="header-menu-item is-hidden-tablet">
-                    <a class="header-menu-link" href="residential-projects.html">Residential</a>
+                    <a class="header-menu-link" href="index.html#projects">Residential</a>
                 </li>
                 <li class="header-menu-item is-hidden-tablet">
                     <a class="header-menu-link" href="offices.html">Offices</a>
                 </li>
                 <li class="header-menu-item is-hidden-tablet">
-                    <a class="header-menu-link" href="rental-projects.html">Rentals</a>
+                    <a class="header-menu-link" href="index.html#featured-projects">Rentals</a>
                 </li>
                 <li class="header-menu-item is-hidden-tablet">
                     <a class="header-menu-link" href="hospitality.html">Hospitality</a>
                 </li>
                 <li class="header-menu-item is-hidden-tablet">
-                    <a class="header-menu-link" href="retail-projects.html">Retail</a>
+                    <a class="header-menu-link" href="index.html#brands">Retail</a>
                 </li>
                 
                 <li class="header-menu-item is-hidden-tablet">
@@ -502,7 +514,7 @@ a{text-decoration:none!important;}
                 </li>
               
                                 <li class="header-menu-item">
-                    <a class="header-menu-link" href="about-us.html">
+                    <a class="header-menu-link" href="index.html#about">
                         About
                     </a>
                 </li>
@@ -1203,7 +1215,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 <div id="info-sections">
-  <section class="section section-about-us">
+  <section id="about" class="section section-about-us">
     <div class="container home-about-us-wrapper">
       <div class="section-title js-scroll fade-in-top">
         <span class="theme-title">About Prestige Group</span>
@@ -1223,7 +1235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   </section>
-  <section class="section section-our-projects light-gray-bg">
+  <section id="projects" class="section section-our-projects light-gray-bg">
     <div class="container our-projects-wrapper">
       <div class="columns is-multiline is-vcentered our-projects-cols gap-1">
         <div class="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen our-projects-col">
@@ -1303,7 +1315,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   </section>
-  <section class="section section-featured-projects light-gray-bg hide_featured_project is-hidden">
+  <section id="featured-projects" class="section section-featured-projects light-gray-bg hide_featured_project is-hidden">
     <div class="container featured-projects-wrapper">
       <div class="section-title section-title-with-arrow js-scroll fade-in-top">
         <span class="theme-title">Residential</span>
@@ -1337,7 +1349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <section class="section section-our-customer-say js-scroll fade-in-bottom hide_review_project is-hidden">
     <div class="container our-customer-say-wrapper bind_test"></div>
   </section>
-  <section class="section section-our-brand light-gray-bg">
+  <section id="brands" class="section section-our-brand light-gray-bg">
     <div class="container our-brand-wrapper">
       <div class="section-title mb-5 has-text-centered js-scroll fade-in-top">
         <span class="theme-title">Verticals</span>
