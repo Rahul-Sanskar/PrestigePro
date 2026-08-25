@@ -1,11 +1,15 @@
 Options -Indexes
 RewriteEngine On
 
-# Rewrite root to the site subfolder transparently (URL stays as prestigemulund.online)
+# Don't rewrite requests that are already targeting the subfolder
 RewriteCond %{REQUEST_URI} !^/www\.prestigeconstructions\.com/
+
+# Don't rewrite actual files/directories at root level (backblue.gif, fade.gif, etc.)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /www.prestigeconstructions.com/$1 [L,QSA]
 
-# Handle root exactly
+# Rewrite everything else to the site subfolder transparently
+RewriteRule ^(.+)$ /www.prestigeconstructions.com/$1 [L,QSA]
+
+# Rewrite bare root to site index
 RewriteRule ^$ /www.prestigeconstructions.com/index.html [L]
