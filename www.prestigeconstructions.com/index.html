@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="light-style">
 
 
@@ -72,10 +72,10 @@ a[href="#brands"],
 </style>
     <link rel="preconnect" href="https://d1t2fddy6amcvs.cloudfront.net/" crossorigin>
 <link rel="preconnect" href="https://voice.acxconvoai.com/" crossorigin>
-<link rel="preload" fetchpriority="high" as="image" href="https://d1t2fddy6amcvs.cloudfront.net/slider/2eb9e157-48d6-4b7d-b0b8-f1903160380a.webp" media="(max-width: 420px)" type="image/webp">
-<link rel="preload" fetchpriority="high" as="image" href="https://d1t2fddy6amcvs.cloudfront.net/slider/e89b7092-401e-464b-b1f0-f388eca5936e.webp" media="(min-width: 421px) and (max-width: 767px)" type="image/webp">
-<link rel="preload" fetchpriority="high" as="image" href="https://d1t2fddy6amcvs.cloudfront.net/slider/038df566-f509-461e-95a9-acdc0cc6389c.webp" media="(min-width: 768px) and (max-width: 1380px)" type="image/webp">
-<link rel="preload" fetchpriority="high" as="image" href="https://d1t2fddy6amcvs.cloudfront.net/slider/32f1b2dd-22bc-43a9-8344-313cbf44f5e7.webp" media="(min-width: 1381px)" type="image/webp">
+<link rel="preload" fetchpriority="high" as="image" href="resources/media/images/slider/2eb9e157-48d6-4b7d-b0b8-f1903160380a.webp" media="(max-width: 420px)" type="image/webp">
+<link rel="preload" fetchpriority="high" as="image" href="resources/media/images/slider/e89b7092-401e-464b-b1f0-f388eca5936e.webp" media="(min-width: 421px) and (max-width: 767px)" type="image/webp">
+<link rel="preload" fetchpriority="high" as="image" href="resources/media/images/slider/038df566-f509-461e-95a9-acdc0cc6389c.webp" media="(min-width: 768px) and (max-width: 1380px)" type="image/webp">
+<link rel="preload" fetchpriority="high" as="image" href="resources/media/images/slider/32f1b2dd-22bc-43a9-8344-313cbf44f5e7.webp" media="(min-width: 1381px)" type="image/webp">
 <style>
     #main-slider {
         visibility: visible !important;
@@ -737,11 +737,11 @@ a[href="#brands"],
             <div class="full-screen-cookie-block-items">
                 <div class="section-title mb-4">
                     <h4>We use cookies to improve your experience</h2>
-                        <!-- <h4>By clicking “Accept All Cookies”,</h2> -->
+                        <!-- <h4>By clicking �Accept All Cookies�,</h2> -->
                 </div>
                 <div class="cookie-block-items-desc">
                     <!-- <p>We use cookies to deliver the best possible experience on our website. To learn more, visit our <a href="https://www.prestigeconstructions.com/privacy-policy" class="golden-text fw-bold">Privacy Policy</a>. By continuing to use this site, or closing this box, you consent to our use of cookies. <a href="" class="golden-text fw-bold">Cookie Notice</a>.</p></div> -->
-                    <p>By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyse site usage, and assist in our marketing efforts.</p>
+                    <p>By clicking �Accept All Cookies�, you agree to the storing of cookies on your device to enhance site navigation, analyse site usage, and assist in our marketing efforts.</p>
                 </div>
             </div>
         </li>
@@ -815,7 +815,7 @@ a[href="#brands"],
                 </div>
                 <div class="cookie-block-items-desc">
                    
-                    <p>By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyse site usage, and assist in our marketing efforts.</p>
+                    <p>By clicking �Accept All Cookies�, you agree to the storing of cookies on your device to enhance site navigation, analyse site usage, and assist in our marketing efforts.</p>
                 </div>
             </div>
         </li>
@@ -907,21 +907,21 @@ a[href="#brands"],
             
 
             if (typeof Moengage !== "undefined") {
-              // ✅ Prefer Customer ID if available and different from stored
+              // ? Prefer Customer ID if available and different from stored
               if (customers_CustomerID && customers_CustomerID !== storedID) {
-                // console.log("✅ Updating MoEngage ID with new Customer ID:", customers_CustomerID);
+                // console.log("? Updating MoEngage ID with new Customer ID:", customers_CustomerID);
                 Moengage.update_unique_user_id(customers_CustomerID);
                 // Moengage.setAlias(customers_CustomerID);
                 localStorage.setItem("last_customer_id", customers_CustomerID);
               
-              // ✅ Fallback to fullMobile if customer ID not available and mobile is new
+              // ? Fallback to fullMobile if customer ID not available and mobile is new
               } else if (!customers_CustomerID && fullMobile && fullMobile !== storedID) {
-                // console.log("✅ Updating MoEngage ID with new Mobile:", fullMobile);
+                // console.log("? Updating MoEngage ID with new Mobile:", fullMobile);
                 Moengage.update_unique_user_id(fullMobile);
                 localStorage.setItem("last_customer_id", fullMobile);
               }
-              // ❌ Otherwise, no update needed
-              // console.log("❌ Otherwise, no update needed");
+              // ? Otherwise, no update needed
+              // console.log("? Otherwise, no update needed");
               
             }
 
@@ -979,7 +979,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul class="splide__list bind_slider"><li class="splide__slide" data-id="6a7e9c99915f280020651915">
                             <div class="section-banner-video">
                                 <a href="residential-projects/chennai/prestige-palm-court.html">
-                                   <picture><source media="(max-width:420px)" srcset="https://d1t2fddy6amcvs.cloudfront.net/slider/2eb9e157-48d6-4b7d-b0b8-f1903160380a.webp" type="image/webp"><source media="(max-width:420px)" srcset="../d1t2fddy6amcvs.cloudfront.net/slider/2eb9e157-48d6-4b7d-b0b8-f1903160380a.png" type="image/jpg"><source media="(max-width:767px)" srcset="https://d1t2fddy6amcvs.cloudfront.net/slider/e89b7092-401e-464b-b1f0-f388eca5936e.webp" type="image/webp"><source media="(max-width:767px)" srcset="../d1t2fddy6amcvs.cloudfront.net/slider/e89b7092-401e-464b-b1f0-f388eca5936e.png" type="image/jpg"><source media="(max-width:1380px)" srcset="https://d1t2fddy6amcvs.cloudfront.net/slider/038df566-f509-461e-95a9-acdc0cc6389c.webp" type="image/webp"><source media="(max-width:1380px)" srcset="../d1t2fddy6amcvs.cloudfront.net/slider/038df566-f509-461e-95a9-acdc0cc6389c.png" type="image/jpg"><source srcset="https://d1t2fddy6amcvs.cloudfront.net/slider/32f1b2dd-22bc-43a9-8344-313cbf44f5e7.webp" type="image/webp"><source srcset="../d1t2fddy6amcvs.cloudfront.net/slider/32f1b2dd-22bc-43a9-8344-313cbf44f5e7.png" type="image/jpg"><img src="https://d1t2fddy6amcvs.cloudfront.net/slider/32f1b2dd-22bc-43a9-8344-313cbf44f5e7.webp" fetchpriority="high" loading="eager" decoding="async" width="1350" height="600" ></picture></a>
+                                   <picture><source media="(max-width:420px)" srcset="resources/media/images/slider/live-easy-plan.jpg" type="image/jpg"><source media="(max-width:767px)" srcset="resources/media/images/slider/live-easy-plan.jpg" type="image/jpg"><source media="(max-width:1380px)" srcset="resources/media/images/slider/live-easy-plan.jpg" type="image/jpg"><source srcset="resources/media/images/slider/live-easy-plan.jpg" type="image/jpg"><img src="resources/media/images/slider/live-easy-plan.jpg" fetchpriority="high" loading="eager" decoding="async" width="1350" height="600" alt="Live Easy Plan - Prestige Garden Trails"></picture></a>
                                     
                                  </div>
                             </li></ul>
@@ -1329,7 +1329,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="theme-modal-card">
     <div class="is-justify-content-center theme-modal-card-header">
       <h3 class="has-text-centered modal-title">
-        <span class="is-block mb-1">⚠️</span>Fraud Alert: Protect Yourself from Scams
+        <span class="is-block mb-1">??</span>Fraud Alert: Protect Yourself from Scams
       </h3>
       <!-- <button class="close close1" aria-label="close" onclick="closeModel('pop-up-info')"><svg
 								xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button> -->
