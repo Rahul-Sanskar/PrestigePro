@@ -1307,6 +1307,7 @@ header.scrolled .theme-menu li a { height: 56px !important; }
   letter-spacing: 3px !important;
   font-size: 10px !important;
   padding: 12px 20px !important;
+  right: -17px !important;
 }
 .theme-btn.enquire-now-sticky-btn:hover {
   background: var(--c-gold-lt) !important;
