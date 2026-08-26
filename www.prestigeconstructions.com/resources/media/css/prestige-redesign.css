@@ -2230,3 +2230,11 @@ label.error .error-msg {
 .related-articles .section-title span {
   color: var(--c-white) !important;
 }
+
+
+/* ── Single hero image — hide slider arrows & pagination ─────── */
+#main-slider .splide__arrows,
+#main-slider .splide__arrow,
+#main-slider .splide__pagination {
+  display: none !important;
+}

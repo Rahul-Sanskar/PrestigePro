@@ -1677,7 +1677,8 @@
             if ($(".bind_slider li[data-id='" + item._id + "']").length == 0) {
               if (i === 0 && $(".bind_slider li").length > 0 && item.projectdetails && item.projectdetails[0] && item.projectdetails[0].CityText && item.projectdetails[0].CityText.toLowerCase() === currentlocationbyipadress) {
                 $(".bind_slider").prepend(slider_bind);
-              } else {
+              } else if (i === 0) {
+                // Only keep the first slide — skip all others
                 $(".bind_slider").append(slider_bind);
               }
             }
@@ -1689,29 +1690,23 @@
         }
       },
       complete: function () {
-        // Main Slider
+        // Main Slider — single image, no carousel
         new Splide("#main-slider", {
           gap: "0px",
-          type: "loop",
-          autoplay: "true",
-          interval: "3000",
-          speed: "2000",
+          type: "slide",
+          autoplay: false,
+          interval: 0,
+          speed: 0,
           perPage: 1,
           perMove: 1,
-          pagination: !1,
+          pagination: false,
+          arrows: false,
+          drag: false,
           breakpoints: {
-            1408: {
-              perPage: 1
-            },
-            1216: {
-              perPage: 1
-            },
-            1024: {
-              perPage: 1
-            },
-            768: {
-              perPage: 1
-            }
+            1408: { perPage: 1 },
+            1216: { perPage: 1 },
+            1024: { perPage: 1 },
+            768:  { perPage: 1 }
           }
         }).mount();
         // End Main Slider
