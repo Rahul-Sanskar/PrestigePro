@@ -1,4 +1,4 @@
-function openTab(e,t,l){let c,o,r;document.querySelectorAll("."+l).forEach((function(l){for(c=0,o=l.querySelectorAll(".content-tab");c<o.length;c++)o[c].style.display="none";for(c=0,r=l.querySelectorAll(".tab");c<r.length;c++)r[c].classList.remove("is-active");let n=l.querySelector("#"+t);n&&(n.style.display="block"),e.currentTarget.classList.add("is-active")}))}
+﻿function openTab(e,t,l){let c,o,r;document.querySelectorAll("."+l).forEach((function(l){for(c=0,o=l.querySelectorAll(".content-tab");c<o.length;c++)o[c].style.display="none";for(c=0,r=l.querySelectorAll(".tab");c<r.length;c++)r[c].classList.remove("is-active");let n=l.querySelector("#"+t);n&&(n.style.display="block"),e.currentTarget.classList.add("is-active")}))}
     /***Menu Toggle Start***/
       let body=document.querySelector("body"),toggles=document.querySelectorAll(".menu-trigger"),closetoggles=document.querySelectorAll(".closemenu");toggles.forEach(t=>t.addEventListener("click",(()=>{body.classList.add("insomenu-active")}))),closetoggles.forEach(c=>c.addEventListener("click",(()=>{body.classList.remove("insomenu-active")})));
         /***End Menu Toggle***/
@@ -522,21 +522,20 @@ function openTab(e,t,l){let c,o,r;document.querySelectorAll("."+l).forEach((func
                 document.querySelectorAll('.footer-dynamic a[href]').forEach(function(a) {
                     a.href = a.href.replace(/^https?:\/\/www\.prestigeconstructions\.com\//i, '').replace(/^https?:\/\/prestigeconstructions\.com\//i, '');
                 });
-                // Remove sales enquiry contact block (phone numbers + email)
-                document.querySelectorAll('.footer-dynamic').forEach(function(footer) {
-                    footer.querySelectorAll('*').forEach(function(el) {
-                        var t = el.innerText || el.textContent || '';
-                        if (t.match(/1800\s*313\s*0080|2559\s*1080|properties@prestigeconstructions/i)) {
-                            var target = el;
-                            while (target.parentElement &&
-                                   target.parentElement.closest('.footer-dynamic') &&
-                                   target.parentElement.children.length <= 2) {
-                                target = target.parentElement;
-                            }
-                            target.remove();
+                // Remove specific contact lines from footer (phone numbers + email only)
+                setTimeout(function() {
+                    document.querySelectorAll('.footer-dynamic li, .footer-dynamic p, .footer-dynamic span, .footer-dynamic a').forEach(function(el) {
+                        var t = (el.innerText || el.textContent || '').trim();
+                        if (t.match(/1800.?313.?0080/i) ||
+                            t.match(/2559.?1080/i) ||
+                            t.match(/properties@prestigeconstructions/i) ||
+                            t.match(/^For\s+sales\s+enquiries/i) ||
+                            t.match(/^For\s+other\s+enquiries/i) ||
+                            t.match(/^Email\s*:/i)) {
+                            el.style.display = 'none';
                         }
                     });
-                });
+                }, 600);
                 // Bind current year for statically loaded footer (like cp-footer)
                 document.querySelectorAll('.bind_current_year').forEach(el => el.textContent = new Date().getFullYear());
             },
