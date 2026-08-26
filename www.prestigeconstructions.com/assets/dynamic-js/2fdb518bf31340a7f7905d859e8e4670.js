@@ -522,6 +522,22 @@ function openTab(e,t,l){let c,o,r;document.querySelectorAll("."+l).forEach((func
                 document.querySelectorAll('.footer-dynamic a[href]').forEach(function(a) {
                     a.href = a.href.replace(/^https?:\/\/www\.prestigeconstructions\.com\//i, '').replace(/^https?:\/\/prestigeconstructions\.com\//i, '');
                 });
+                // Remove sales enquiry contact block (phone numbers + email)
+                document.querySelectorAll('.footer-dynamic').forEach(function(footer) {
+                    footer.querySelectorAll('*').forEach(function(el) {
+                        var t = el.innerText || el.textContent || '';
+                        if (t.match(/1800\s*313\s*0080|2559\s*1080|properties@prestigeconstructions/i)) {
+                            // Walk up to remove the nearest meaningful block ancestor
+                            var target = el;
+                            while (target.parentElement &&
+                                   target.parentElement.closest('.footer-dynamic') &&
+                                   target.parentElement.children.length <= 2) {
+                                target = target.parentElement;
+                            }
+                            target.remove();
+                        }
+                    });
+                });
                 // Bind current year for statically loaded footer (like cp-footer)
                 document.querySelectorAll('.bind_current_year').forEach(el => el.textContent = new Date().getFullYear());
             },
