@@ -2250,8 +2250,8 @@ label.error .error-msg {
   bottom: 32px;
   right: 32px;
   z-index: 1200;
-  width: 58px;
-  height: 58px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: var(--c-gold);
   border: none;
@@ -2259,39 +2259,69 @@ label.error .error-msg {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
   box-shadow: 0 4px 24px rgba(201,168,76,.45), 0 2px 8px rgba(0,0,0,.35);
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
   outline: none;
+  overflow: visible;
 }
 #float-enquiry-btn:hover {
   background: var(--c-gold-lt);
   transform: scale(1.08);
   box-shadow: 0 8px 36px rgba(201,168,76,.55), 0 2px 12px rgba(0,0,0,.4);
 }
-#float-enquiry-btn svg {
-  width: 26px;
-  height: 26px;
+
+/* Full-size SVG fills the button */
+#fe-btn-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Circular spinning text */
+.fe-circular-text {
+  font-family: var(--f-accent), 'Space Grotesk', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  fill: #fff;
+  animation: fe-spin 9s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+/* Centre chat icon */
+.fe-chat-icon {
   fill: none;
   stroke: #fff;
-  stroke-width: 2;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  flex-shrink: 0;
+}
+
+@keyframes fe-spin {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+
+/* Pause spin on hover so user can read it */
+#float-enquiry-btn:hover .fe-circular-text {
+  animation-play-state: paused;
 }
 
 /* Pulse ring animation */
 #float-enquiry-btn::before {
   content: '';
   position: absolute;
-  inset: -6px;
+  inset: -8px;
   border-radius: 50%;
   border: 2px solid rgba(201,168,76,.4);
   animation: floatPulse 2.2s ease-out infinite;
+  pointer-events: none;
 }
 @keyframes floatPulse {
   0%   { transform: scale(1);   opacity: .7; }
-  70%  { transform: scale(1.4); opacity: 0;  }
-  100% { transform: scale(1.4); opacity: 0;  }
+  70%  { transform: scale(1.35); opacity: 0;  }
+  100% { transform: scale(1.35); opacity: 0;  }
 }
 
 /* Modal backdrop */
@@ -2540,10 +2570,12 @@ label.error .error-msg {
     right: 12px;
     left: 12px;
     width: auto;
-    bottom: 96px;
+    bottom: 108px;
   }
   #float-enquiry-btn {
-    right: 18px;
-    bottom: 24px;
+    right: 16px;
+    bottom: 20px;
+    width: 68px;
+    height: 68px;
   }
 }

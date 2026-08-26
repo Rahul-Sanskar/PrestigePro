@@ -1696,9 +1696,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Floating trigger button -->
 <button id="float-enquiry-btn" aria-label="Open enquiry form" aria-expanded="false" aria-controls="float-enquiry-modal">
-  <!-- Chat / message icon -->
-  <svg viewBox="0 0 24 24">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  <!-- Circular "Enquire Now!" text + chat icon -->
+  <svg id="fe-btn-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Circle path the text travels along (slightly inset from edge) -->
+      <path id="fe-circle-path" d="M 50,50 m -34,0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0"/>
+    </defs>
+    <!-- Rotating text ring -->
+    <text class="fe-circular-text">
+      <textPath href="#fe-circle-path" startOffset="0%">
+        ENQUIRE NOW! ✦ ENQUIRE NOW! ✦ ENQUIRE NOW! ✦&nbsp;
+      </textPath>
+    </text>
+    <!-- Centre chat icon -->
+    <g transform="translate(50,50)">
+      <path class="fe-chat-icon" d="M10.5 7.5a2 2 0 0 1-2 2H-6.5l-4 4V-7.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </g>
   </svg>
 </button>
 
