@@ -1079,7 +1079,7 @@ header.scrolled .language-dropdown button { color: var(--c-pearl) !important; }
 }
 
 .section-board-of-director .theme-block:hover {
-  background: rgba(255,255,255,.04) !important;
+  background: var(--c-cloud) !important;
   border-color: var(--c-gold-border) !important;
   box-shadow: var(--sh-xl), 0 0 40px var(--c-gold-glow) !important;
   transform: translateY(-10px);
@@ -1355,13 +1355,13 @@ header.scrolled .language-dropdown button { color: var(--c-pearl) !important; }
   font-family: var(--f-display) !important;
   font-size: 22px !important;
   font-weight: 400 !important;
-  color: var(--c-white) !important;
+  color: #000000 !important;
   line-height: 1.3 !important;
 }
 .theme-block-title span {
   font-family: var(--f-body) !important;
   font-size: 12px !important;
-  color: var(--c-silver) !important;
+  color: #000000 !important;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -2104,7 +2104,13 @@ select.select {
 .section-board-of-director .theme-block p,
 .section-board-of-director .theme-block span,
 .section-board-of-director .theme-block small {
-  color: var(--c-pearl) !important;
+  color: #000000 !important;
+}
+.section-board-of-director .theme-block-title h4 {
+  color: #000000 !important;
+}
+.section-board-of-director .theme-block-title span {
+  color: #000000 !important;
 }
 
 /* BONUS FIX — Search overlay background: original was light-frosted, redesign makes it dark.
