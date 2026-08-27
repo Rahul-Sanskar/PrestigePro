@@ -1588,6 +1588,35 @@ document.addEventListener("DOMContentLoaded", () => {
 <script nonce="randomValue" defer src="resources/media/js/pure-counter.min.js"></script>
 <script nonce="randomValue" defer src="resources/media/js/custom.min.js"></script>
 <script nonce="randomValue" defer src="resources/media/js/all-custom.min.js"></script>
+<script nonce="randomValue">
+/* Prestige scroll-reveal — drives .js-scroll / .scrolled classes */
+(function(){
+  function initReveal(){
+    document.body.classList.add('js-scroll-ready');
+    var els = document.querySelectorAll('.js-scroll');
+    if(!els.length) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('scrolled');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',initReveal);
+  } else { initReveal(); }
+  /* Header scroll class */
+  var hdr = document.getElementById('header');
+  if(hdr){
+    window.addEventListener('scroll',function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 60);
+    },{passive:true});
+  }
+}());
+</script>
 
 
 

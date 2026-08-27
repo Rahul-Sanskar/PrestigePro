@@ -143,6 +143,31 @@ a[href="index.html#brands"],
 
 <link rel="stylesheet" type="text/css" href="resources/media/css/inc-css-all812b.css?1.1.4">
 <link rel="stylesheet" type="text/css" href="resources/media/css/inc-custom812b.css?1.1.4">
+<script>
+/* Prestige scroll-reveal + header scroll */
+(function(){
+  function initReveal(){
+    document.body.classList.add('js-scroll-ready');
+    var els = document.querySelectorAll('.js-scroll');
+    if(!els.length) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('scrolled'); io.unobserve(e.target); }
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',initReveal);
+  } else { initReveal(); }
+  var hdr = document.getElementById('header');
+  if(hdr){
+    window.addEventListener('scroll',function(){
+      hdr.classList.toggle('scrolled', window.scrollY > 60);
+    },{passive:true});
+  }
+}());
+</script>
 
 
 
