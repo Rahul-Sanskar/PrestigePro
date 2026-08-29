@@ -4074,3 +4074,13 @@ label.error .error-msg {
 /* NOTE: The actual JS is injected into index.html and inner pages
    via a shared <script> tag already present in the page's custom.min.js.
    The class .js-scroll-ready is added to <body> by the observer init. */
+
+
+/* ── Disable fraud alert popup on page load ── */
+#pop-up-info,
+#pop-up-info .theme-modal-background {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
